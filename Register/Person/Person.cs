@@ -14,7 +14,7 @@ namespace Register.Person
 
         int age;
         int salary;
-        String name;
+        string name;
 
         public Person(int age, int salary, string name)
         {
