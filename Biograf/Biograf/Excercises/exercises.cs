@@ -26,14 +26,14 @@ namespace Biograf.Excercises
     
         public static void splitMyString()
         {
-            String[] words;
+            string[] words;
             string mening;
             Console.WriteLine("Skriv en mening");
             mening = Console.ReadLine();
 
-            words = mening.Split(" ");
+            words = mening.Split(" ", StringSplitOptions.RemoveEmptyEntries);
 
-            if(words.Length > 2)
+            if (words.Length > 2)
             {
                 Console.WriteLine("Det tredje order var " + words[2]);
                
