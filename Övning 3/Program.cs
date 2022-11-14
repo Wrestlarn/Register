@@ -83,6 +83,8 @@ namespace Övning_3
                     
                     Console.WriteLine(((Dog)dogs).testMyStringInLoop());
                     
+                    
+                   
                 }
             }
             

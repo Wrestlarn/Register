@@ -56,14 +56,15 @@ namespace Biograf.Besökarregister
 
         {
             int[] age = new int[total];
-            for (int i = 0; i < age.Length; i++)
+            for (int i = 0; i <age.Length;)
             {
-
+                
                 Console.WriteLine("Hej kund ange din ålder");
 
                 try
                 {
                     age[i] = int.Parse(Console.ReadLine()!);
+                    i++;
                 }
                 catch (FormatException)
                 {
@@ -73,7 +74,8 @@ namespace Biograf.Besökarregister
                     {
                         i = 0;
                     }
-                    else i--;
+                    else --i;
+                    
                 }
             }
 

@@ -16,7 +16,7 @@ namespace Övning_3.Animals
 
         public void Talk()
         {
-            Console.WriteLine("Thiller night");
+            Console.WriteLine("Thriller night");
         }
 
         public override void doSound()
