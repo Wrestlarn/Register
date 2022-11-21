@@ -36,7 +36,7 @@ namespace Övning_4
                     index++;
                 } else if(cleaner[i] == ')' || cleaner[i] == '}' || cleaner[i] == ']')
                 {
-                    if(checker.Count == 0)
+                    if(checker.Count() == 0)
                     {
                         unmatchedPair++;
                         break;
@@ -62,7 +62,15 @@ namespace Övning_4
                         checker.Pop();
                         continue;
                     }
-                    
+                    else
+                    {
+                        Console.WriteLine("no matching pair found");
+                        unmatchedPair++;
+
+                    }
+
+
+
                 }
             
             }
