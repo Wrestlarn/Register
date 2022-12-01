@@ -25,7 +25,7 @@ namespace Övning_5.Garage
             this.garageCapacity = new T[capacity];
             this.garageDoorOpen = true;
             this.name = name;
-            
+
         }
 
         public int getNumberofPakedVehicles()
@@ -42,7 +42,7 @@ namespace Övning_5.Garage
         {
             return this.name;
         }
-        
+
         public void setName(string name)
         {
             this.name = name;
@@ -61,14 +61,14 @@ namespace Övning_5.Garage
 
         public void listVehicles()
         {
-           
-            if(numberofParkedVehicles == 0)
+
+            if (numberofParkedVehicles == 0)
             {
                 return;
             }
-            foreach(T t in garageCapacity)
+            foreach (T t in garageCapacity)
             {
-                if(t != null)
+                if (t != null)
                 {
                     Console.WriteLine(t.Stats());
 
@@ -91,13 +91,13 @@ namespace Övning_5.Garage
         public void populateGarage()
         {
             Vehicle.GenerateMassiveAmountsOfVehicles();
-            
 
-           
-                for (int i = 0; i < this.garageCapacity.Length; i++)
+
+
+            for (int i = 0; i < this.garageCapacity.Length; i++)
+            {
+                if (GarageHandler.selectedGarage.garageCapacity[i] == null)
                 {
-                    if (GarageHandler.selectedGarage.garageCapacity[i] == null)
-                    {
                     try
                     {
                         this.garageCapacity[i] = (T)Garage.GarageHandler.vehicleQueue.Dequeue();
@@ -111,14 +111,14 @@ namespace Övning_5.Garage
                     }
 
 
-                    }
                 }
-            
+            }
+
         }
-        
+
         public void searchVehcilebyRegistryNumber()
         {
-            if(GarageHandler.selectedGarage.numberofParkedVehicles == 0)
+            if (GarageHandler.selectedGarage.numberofParkedVehicles == 0)
             {
                 return;
             }
@@ -127,8 +127,8 @@ namespace Övning_5.Garage
             string s = UserInput.UserInputHandler.readString();
 
             var query = (from v in GarageHandler.selectedGarage.garageCapacity
-            where String.Equals(v?.getRegnr(), s, StringComparison.OrdinalIgnoreCase)
-            select v);
+                         where String.Equals(v?.getRegnr(), s, StringComparison.OrdinalIgnoreCase)
+                         select v);
 
             if (query.Any())
             {
@@ -136,7 +136,7 @@ namespace Övning_5.Garage
             }
             else Console.WriteLine("Hittade ingen bil med rgnmr");
         }
-    
+
         public void searchByProperty()
         {
             if (GarageHandler.selectedGarage.numberofParkedVehicles == 0)
@@ -151,13 +151,13 @@ namespace Övning_5.Garage
                 Console.WriteLine(((VehicleType)value).ToString());
             }
             Console.WriteLine("ange vilken fodrontyp du vill söka på");
-            vehicletype= UserInput.UserInputHandler.readString();
+            vehicletype = UserInput.UserInputHandler.readString();
 
             foreach (int value in Enum.GetValues(typeof(Colors)))
             {
                 Console.WriteLine(((Colors)value).ToString());
             }
-            
+
             Console.WriteLine("ange vilken färg du vill söka på");
             color = UserInput.UserInputHandler.readString();
 
@@ -179,7 +179,7 @@ namespace Övning_5.Garage
 
             if (query.Any())
             {
-                foreach(Vehicle v in query)
+                foreach (Vehicle v in query)
                 {
                     Console.WriteLine(v.Stats());
                 }
@@ -193,7 +193,7 @@ namespace Övning_5.Garage
         public void removeCarFromGarage()
         {
             Vehicle v;
-            Random  random= new Random();
+            Random random = new Random();
             int i;
 
             i = random.Next(this.garageCapacity.Length);
@@ -210,7 +210,7 @@ namespace Övning_5.Garage
                 Console.WriteLine("Fanns ingen parkerad på denna plats");
             }
 
-            
+
 
 
         }

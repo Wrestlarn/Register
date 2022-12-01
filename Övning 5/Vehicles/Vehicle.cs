@@ -30,7 +30,7 @@ namespace Övning_5.Vehicles
         public virtual void setFuelType(FuelType fueltype)
         {
             this.fuelType = fueltype;
-        } 
+        }
         public virtual void setRegnr(string regnr)
         {
             this.regnr = regnr;
@@ -65,11 +65,8 @@ namespace Övning_5.Vehicles
         {
             return this.fuelType;
         }
-
-
-        public static  void GenerateMassiveAmountsOfVehicles()
+        public static void GenerateMassiveAmountsOfVehicles()
         {
-            
             Random ran = new Random();
             string regnr = "";
             for (int i = 0; i <= 500; i++)
@@ -90,10 +87,10 @@ namespace Övning_5.Vehicles
                 FuelType ftype = (FuelType)values.GetValue(randomValue);
                 Console.WriteLine(ftype);
                 regnr = generateRegnr();
-                
-                if(vtype == VehicleType.Car)
+
+                if (vtype == VehicleType.Car)
                 {
-                    Vehicle v = new Car(1,regnr,4,ftype,ctype,vtype);
+                    Vehicle v = new Car(1, regnr, 4, ftype, ctype, vtype);
                     GarageHandler.vehicleList.Add(v);
                 }
                 if (vtype == VehicleType.Boat)
@@ -119,11 +116,11 @@ namespace Övning_5.Vehicles
 
             }
 
-            foreach(Vehicle v in GarageHandler.vehicleList)
+            foreach (Vehicle v in GarageHandler.vehicleList)
             {
                 Garage.GarageHandler.vehicleQueue.Enqueue(v);
             }
-            
+
         }
 
         public static string generateRegnr()
@@ -177,6 +174,4 @@ namespace Övning_5.Vehicles
         Bus,
         Boat
     }
-
-
 }
