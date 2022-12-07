@@ -1,0 +1,133 @@
+body {
+  box-sizing: content-box;
+  background-color: #2c635a;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  
+}
+
+
+
+.fw-bolder {
+  font-size: medium;
+  text-align: center;
+  width: 100%;
+ 
+  padding: 1em;
+}
+
+.navigering li {
+  display: inline-block;
+  color: white;
+  background-color: #13a4a4;
+  padding: 5px;
+  border-radius: 2px;
+  text-decoration: none;
+  text-align: center;
+}
+.navigering .featured {
+  background-color: orange;
+}
+
+.navbar-nav li{
+  background-color: rgb(29, 59, 120);
+}
+
+.navbar-nav .special{
+  background-color: rgb(136, 97, 12);
+}
+.navbar-nav .about{
+  background-color: rgb(112, 12, 134);
+}
+
+.navbar-nav .service{
+  background-color: rgb(164, 8, 101);
+}
+
+.navbar-nav li{
+  padding:  0.4em;
+  margin: 0 1em;
+  border-radius: 10px;
+}
+
+
+
+.navbar{
+  background-color: rgb(7, 116, 64);
+}
+
+.img-fluid{
+  max-width: 100%;
+  max-height: auto;
+}
+h3{
+  
+  color: rgb(204, 202, 196);
+  
+  margin: 1em ;
+  text-align: center;
+  font-size: 24px;
+}
+p{
+  font-size: 20px;
+  color: rgb(204, 202, 196);
+}
+
+.navbar  a {
+  color: rgba(255, 255, 255, 0.788);
+}
+
+.nav-link{
+  color: white;
+}
+
+.prdu p{
+  color: rgb(196, 157, 157);
+}
+
+.prdu .card{
+  background-color: rgb(41, 27, 27);
+}
+.prdu  h5{
+  color: rgb(196, 157, 157);
+}
+
+.prdu strong{
+  color: rgb(196, 157, 157);
+}
+
+footer{
+  background-color: rgb(149, 6, 77);
+  
+  padding: 1em;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  
+}
+.wrapper{
+  
+  margin-top: 25px;
+  background-color: rgb(149, 6, 77);
+  padding: 2em;
+  display: block;
+}
+
+body
+   {
+    min-height: calc(100vh - 70px);
+  }
+  
+  .prdu h5{
+    font-weight: bold;
+  }
+
+.prdu h3{
+  color: rgb(204, 202, 196);
+  
+}
+
+#aboutus p{
+  color: rgb(204, 202, 196);
+  ;
+}
