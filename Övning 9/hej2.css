@@ -1,0 +1,62 @@
+:root {
+  box-sizing: border-box;
+  }
+  *,
+  ::before,
+  ::after {box-sizing: inherit;
+  }
+
+
+
+#main h1{
+  text-align: center;
+}
+
+li{
+  list-style: none;
+}
+
+li:nth-child(odd) {
+  background-color: rgba(244, 238, 238, 0.785);
+}
+
+.container h1 {
+  text-align: center;
+}
+
+input{
+  margin: 1.2em;
+}
+
+button{
+  margin: 1em;
+}
+
+#hider{
+  margin-top: 5em;
+  padding: 0.5em;
+  color: #fff;
+  background-color: #0090C9;
+  display: inline;
+}
+
+.sidebar {
+  display: inline-block;
+  padding: 0.5em;
+  color: #fff;
+  background-color: #0090C9;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  }
+
+  
+ .flex-wrapper{
+  height: 50px;
+  position: fixed;
+ 
+ }
+
+ .rr{
+  min-height: calc(100vh - 70px);
+ }
